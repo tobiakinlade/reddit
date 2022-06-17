@@ -6,7 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-html {
+/* html {
   filter: invert(100%);
 }
 
@@ -22,7 +22,7 @@ img {
   img {
     filter: invert(100%);
   }
-}
+} */
 
 a {
   color: inherit;
