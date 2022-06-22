@@ -22,8 +22,8 @@ model User {
   sessions      Session[]
 
   posts         Post[]
-comments      Comment[]
-Vote          Vote[]
+  comments      Comment[]
+  Vote          Vote[]
 }
 
 model VerificationToken {
@@ -92,6 +92,10 @@ model Comment {
   authorId  String
   post      Post?    @relation(fields: [postId], references: [id])
   postId    Int?
+
+  parentId Int?
+  parent Comment? @relation("ParentComment", fields: [parentId], references: [id])
+  Comment Comment[] @relation("ParentComment")
 }
 
 model Vote {
