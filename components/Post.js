@@ -25,6 +25,12 @@ export default function Post({ post }) {
             {post.title}
           </a>
         </Link>
+        {post.image && (
+          <img
+            src={post.image}
+            className='flex-shrink text-base font-normal color-primary width-auto mt-2'
+          />
+        )}
 
         <p className='flex-shrink text-base font-normal color-primary width-auto mt-2'>
           {post.content}

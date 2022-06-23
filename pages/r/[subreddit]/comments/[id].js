@@ -81,9 +81,15 @@ export default function Post({ subreddit, post, votes, vote }) {
             </div>
           </div>
           <div className='mt-1'>
-            <p className='flex-shrink text-2xl font-bold color-primary width-auto'>
+            <a className='flex-shrink text-2xl font-bold color-primary width-auto'>
               {post.title}
-            </p>
+            </a>
+            {post.image && (
+              <img
+                src={post.image}
+                className='flex-shrink text-base font-normal color-primary width-auto mt-2'
+              />
+            )}
             <p className='flex-shrink text-base font-normal color-primary width-auto mt-2'>
               {post.content}
             </p>
